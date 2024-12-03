@@ -130,7 +130,7 @@
 </section>
 
 <!-- Modal de Cadastro -->
-<form method="POST" action="cadastrar.php">
+
     <div class="modal fade" id="userForm">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">

@@ -15,7 +15,7 @@ $sql = ("INSERT INTO `funcionario`
         `data_nascimento`, 
         `telefone`, 
         `endereco`, 
-        `turno_disponivel`, 
+        `turno_disponivel`
     ) 
     VALUES 
     (
@@ -23,7 +23,7 @@ $sql = ("INSERT INTO `funcionario`
         :data_nascimento,
         :telefone,
         :endereco,
-        :turno_disponivel,
+        :turno_disponivel
 )");
 
 $executar = Db::conexao()->prepare($sql);
