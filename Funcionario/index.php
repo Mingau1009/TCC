@@ -130,56 +130,46 @@
 </section>
 
 <!-- Modal de Cadastro -->
-<div class="modal fade" id="userForm">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Ficha de Cadastro de Funcionário</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-            </div>
-            <div class="modal-body">
-                <form action="#" id="myForm">
-                    <div class="card imgholder">
-                        <label for="imgInput" class="upload">
-                            <input type="file" name="" id="imgInput">
-                            <i class="bi bi-plus-circle-dotted"></i>
-                        </label>
-                        <img src="./image/Profile Icon.webp" alt="" width="200" height="200" class="img">
-                    </div>
+<form method="POST" action="cadastrar.php">
+    <div class="modal fade" id="userForm">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Ficha de Cadastro de Funcionário</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
                     <div class="inputField">
                         <div>
                             <label for="name">Nome Completo:</label>
-                            <input type="text" name="" id="name" required>
+                            <input type="text" name="name" id="name" required>
                         </div>
                         <div>
                             <label for="sdate">Data de Nascimento:</label>
-                            <input type="date" name="" id="sdate" required>
+                            <input type="date" name="sdate" id="sdate" required>
                         </div>
                         <div>
                             <label for="telefone">Telefone:</label>
-                            <input type="text" name="" id="telefone" required>
+                            <input type="text" name="telefone" id="telefone" required>
                         </div>
                         <div>
                             <label for="address">Endereço:</label>
-                            <input type="text" name="" id="address" required>
+                            <input type="text" name="address" id="address" required>
                         </div>
                         <div>
                             <label for="frequency">Turno Disponível:</label>
-                            <input type="text" name="" id="frequency" required>
+                            <input type="text" name="frequency" id="frequency" required>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-                <button type="submit" form="myForm" class="btn btn-success submit">cadastrar
-           
-            </button>
-                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit"  class="btn btn-success submit">cadastrar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
 
 <!-- Modal de Visualização -->
 <div class="modal fade" id="readData">

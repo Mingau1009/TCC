@@ -88,26 +88,24 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <div class="modal-body">
-                    <form id="myForm">
+                <form method="POST" action="cadastrar.php">
+                    <div class="modal-body">
                         <div class="inputField">
                             <div class="mb-3">
                                 <label for="exerciseName" class="form-label">Nome do exercício:</label>
-                                <input type="text" id="exerciseName" class="form-control small-input" required>
+                                <input type="text" id="exerciseName" name="nome" class="form-control small-input" required>
                             </div>
-                
                             <div class="mb-3">
                                 <label for="exerciseType" class="form-label">Escolha o tipo de treino:</label>
-                                <select id="exerciseType" class="form-select small-select" required>
+                                <select  name="exercicio" id="exerciseType" class="form-select small-select" required>
                                     <option value="" disabled selected>Selecione o tipo de treino</option>
                                     <option value="musculacao">Musculação</option>
                                     <option value="cardio">Cardio</option>
                                 </select>
                             </div>
-                            
                             <div class="mb-3">
-                                <label for="exerciseGroup" class="form-label">Grupo:</label>
-                                <select id="exerciseGroup" class="form-select small-select" required>
+                                <label for="exerciseGroup"  class="form-label">Grupo:</label>
+                                <select name="grupo" id="exerciseGroup" class="form-select small-select" required>
                                     <option value="" disabled selected>Selecione o tipo de treino</option>
                                     <option value="abdômen">Abdômen</option>
                                     <option value="cardio">Cardio</option>
@@ -120,13 +118,13 @@
                                 </select>
                             </div>
                         </div>
-                    </form>
-                </div>
-                    
-                <div class="modal-footer">
+                    </div>
+                    <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">FECHAR</button>
-                    <button type="submit" form="myForm" class="btn btn-success submit">SALVAR</button>
+                    <button type="submit" class="btn btn-success submit">SALVAR</button>
                 </div>
+                </form>
+               
             </div>
         </div>
     </div>
