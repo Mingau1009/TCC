@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function() {
     const form = document.getElementById("myForm");
     const userName = document.getElementById("nomeExercicio"); // Nome do Exercício
     const exerciseCategory = document.getElementById("categoriaExercicio"); // Categoria do Exercício
@@ -9,13 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalTitle = document.querySelector("#userForm .modal-title");
     const newUserBtn = document.querySelector(".newUser");
 
+
     let getData = localStorage.getItem('exerciseData') ? JSON.parse(localStorage.getItem('exerciseData')) : [];
-    let isEdit = false, editId;
+    let isEdit = false;
+    let editId = false;
 
-    showInfo();
+    // showInfo();
 
-    newUserBtn.addEventListener('click', resetForm);
-    form.addEventListener('submit', handleSubmit);
+    // newUserBtn.addEventListener('click', resetForm);
+    // form.addEventListener('submit', handleSubmit);
 
     function resetForm() {
         submitBtn.innerText = 'Salvar';
@@ -105,5 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
         showInfo();
         resetForm();
     }
+    $("#nomeExercicio").on("change", function(){
+        mostrarCampos();
+    });
     
 });
+

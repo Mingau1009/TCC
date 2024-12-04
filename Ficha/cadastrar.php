@@ -10,7 +10,6 @@ $num_series = isset($_POST["series"]) ? $_POST["series"] : NULL;
 $num_repeticoes = isset($_POST["repeticoes"]) ? $_POST["repeticoes"] : NULL;
 $tempo_descanso = isset($_POST["descanso"]) ? $_POST["descanso"] : NULL;
 
-
 $sql = ("INSERT INTO `exercicio` 
     (
         `aluno`, 
