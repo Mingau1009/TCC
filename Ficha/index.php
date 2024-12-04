@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <div class="col-4">
                 <button class="btn btn-success newUser" data-bs-toggle="modal" data-bs-target="#userForm">
-                    Cadastrar <i class="bi bi-people"></i>
+                    Cadastrar Ficha
                 </button>
             </div>
         </div>
@@ -35,7 +35,13 @@
                     </tr>
                 </thead>
                 <tbody id="data">
-
+                <?php $fichas = Db::conexao()->query("SELECT * FROM `ficha`")->fetchAll(PDO::FETCH_OBJ); ?>
+                    <?php foreach ($fichas as $ficha) { ?>
+                        <tr>
+                            <td><?php echo $ficha->aluno; ?></td>
+                            <td><?php echo $ficha->nomeFicha; ?></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
