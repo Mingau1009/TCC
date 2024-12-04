@@ -1,140 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+table tr td {
+    vertical-align: middle;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-image: url('Academia1.png'); 
-  background-size: 100%; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+td button {
+    margin: 5px;
 }
 
-.content {
-  max-width: 1450px;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+td button i {
+    font-size: 20px;
 }
 
-.content .card {
-  background: rgba(255, 255, 255, 0.9);
-  width: calc(33.33% - 20px);
-  text-align: center;
-  padding: 15px 30px 30px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+.modal-header {
+    background: #262729;
+    color: #fff;
 }
 
-.content .card .top {
-  height: 140px;
-  color: #fff;
-  padding: 12px 0 0 0;
-  clip-path: polygon(0 0, 100% 0, 100% 53%, 49% 100%, 0 53%);
+.modal-body form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
 }
 
-.content .card .top .title {
-  font-size: 27px;
-  font-weight: 1000;
+.modal-body form .imgholder {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.content .card .top .price-sec {
-  margin-top: -10px;
-  font-weight: 800;
-}
-
-.content .card .top .price {
-  font-size: 61px;
-}
-
-.content .card .info {
-  font-size: 17px;
-  margin-top: 20px;
-}
-
-.content .card .details .one {
-  margin-top: 25px;
-  font-size: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.content .card .details .one::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  background: #ddd;
-  height: 1px;
-  left: 0;
-  top: -12px;
-  border-radius: 25px;
-}
-
-.content .card .details .one i {
-  color: #2db94d;
-}
-
-.content .card .details i.fa-times {
-  color: #cd3241;
-}
-
-.content .card a {
-  outline: none;
-  border: none;
-  height: 52px;
-  color: #fff;
-  margin-top: 20px;
-  border-radius: 3px;
-  padding: 10px;
-  font-size: 20px;
-  width: 100%;
-  display: block;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  letter-spacing: 1px;
-}
-
-.content .one .top,
-.content .one a {
-  background: #ff8830;
-}
-
-.content .two .top,
-.content .two a {
-  background: #117f09;
-}
-
-.content .three .top,
-.content .three a {
-  background: #0c38e7;
-}
-
-.content a:hover {
-  filter: brightness(90%);
-}
-
-@media (max-width:1000px) {
-  .content .card {
-    background: rgba(255, 255, 255, 0.9); 
-    width: calc(50% - 20px);
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width:715px) {
-  .content .card {
+.imgholder .upload {
+    position: absolute;
+    bottom: 0;
+    left: 10;
     width: 100%;
-  }
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
+.upload i {
+    color: #fff;
+    font-size: 35px;
+}
+
+.imgholder:hover .upload {
+    display: flex;
+}
+
+.imgholder .upload input {
+    display: none;
+}
+
+.modal-body form .inputField {
+    flex-basis: 68%;
+    border-left: 5px groove #171718;
+    padding-left: 20px;
+}
+
+form .inputField > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form .inputField > div label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#userForm form .inputField > div label::after {
+    content: "*";
+    color: red;
+}
+
+form .inputField > div input {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #000;
+}
+
+.modal-footer .submit {
+    font-size: 18px;
+}
+
+#readData form .inputField > div input {
+    color: #000;
+    font-size: 18px;
+}
+
+.pdf-button {
+    background-color: #3f8f31; /* Cor verde */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Ajusta o padding */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-left: 10px; /* Margem esquerda para espaçamento */
+}
+
+.pdf-button:hover,
+.pdf-button:active,
+.pdf-button:focus {
+    background-color: #3f8f31; /* Mantém a mesma cor verde */
+    outline: none; /* Remove o contorno padrão ao clicar */
+}
+
+.button-container {
+    display: flex;          /* Utiliza Flexbox */
+    justify-content: space-between; /* Alinha os botões com espaço entre eles */
+    align-items: center;   /* Alinha verticalmente no centro */
+    margin-top: 10px;      /* Ajuste a margem conforme necessário */
+}
+
+.dropdown-item {
+    margin-bottom: 7.5px; /* Espaçamento de 10px abaixo de cada item */
+}
+
