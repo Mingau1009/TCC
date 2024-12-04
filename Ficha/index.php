@@ -20,6 +20,19 @@
                 </button>
             </div>
         </div>
+
+        <br>
+        <div class="row mb-3">
+        <div class="col-12 text-start">
+            <div class="input-group short-input">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class="bi bi-search"></i> <!-- Ícone de lupa -->
+                </span>
+                <input type="text" class="form-control search-input" placeholder="Buscar por funcionário..." aria-label="Buscar por funcionário..." aria-describedby="basic-addon1">
+                
+            </div>
+        </div>
+    </div>
     </section>
 
     <br>
